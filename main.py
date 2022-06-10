@@ -12,3 +12,6 @@ woord= random.choice (woordenlijst)
 lengtewoord = len(woord)
 temp = "." * lengtewoord
 print ("het woord heeft " + str(lengtewoord) + " letters")
+
+#kies een letter
+letter = input ("kies een letter\n")
