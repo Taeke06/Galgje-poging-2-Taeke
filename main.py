@@ -15,3 +15,11 @@ print ("het woord heeft " + str(lengtewoord) + " letters")
 
 #kies een letter
 letter = input ("kies een letter\n")
+
+#heb je het woord
+while True:
+  userguess = (input(": "))
+  match = re.search(userguess, woord)
+  if userguess == woord: 
+    print('je heb het woord ' + '"' + woord + '"' + " geraden")
+    break
