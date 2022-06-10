@@ -8,3 +8,7 @@ woordenlijst= ["informatica", "informatiekunde", "spelletje", "aardigheidje", "s
 #computer kiest willekeurig woord
 woord= random.choice (woordenlijst)
 
+#lengtewoord (in puntjes)
+lengtewoord = len(woord)
+temp = "." * lengtewoord
+print ("het woord heeft " + str(lengtewoord) + " letters")
