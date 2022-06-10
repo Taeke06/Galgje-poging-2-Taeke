@@ -5,6 +5,8 @@ print("Welkom bij Galgje!\nGalgje is een spel waar je een woord moet raden die d
 
 #woordenlijst
 woordenlijst= ["informatica", "informatiekunde", "spelletje", "aardigheidje", "scholier", "fotografie", "waardebepaling", "specialiteit", "verzekering", "universiteit" , "heesterperk"]
+gekozenletters = []
+gamerunning = True
 
 #computer kiest willekeurig woord
 woord= random.choice (woordenlijst)
@@ -13,14 +15,27 @@ woord= random.choice (woordenlijst)
 lengtewoord = len(woord)
 temp = "." * lengtewoord
 print ("het woord heeft " + str(lengtewoord) + " letters")
+print(f"het woord is {woord}")
 
-#kies een letter
-letter = input ("kies een letter\n")
+
 
 #heb je het woord
-while True:
-  userguess = (input(": "))
-  match = re.search(userguess, woord)
-  if userguess == woord: 
-    print('je heb het woord ' + '"' + woord + '"' + " geraden")
-    break
+while gamerunning:
+  streepjes = []
+  #kies een letter
+  l = input ("kies een letter\n")
+  gekozenletters.append(l)
+  print(gekozenletters)
+  for letter in woord:
+    if letter in gekozenletters:
+      streepjes.append(letter)
+    else: 
+      streepjes.append("_")
+
+  print(" ".join(streepjes))
+  
+  # i = input("nog een beurt?")
+  # if(i == "n"):
+  #   print("ok dan niet")
+  #   gamerunning = False
+
