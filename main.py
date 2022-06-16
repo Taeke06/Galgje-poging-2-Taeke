@@ -40,7 +40,7 @@ while True:
       print ("die letter heb je al geraden")
       letter()
 #uitvoeren van functie letter + gewonnen
-  else:
+    else:
       geradenletters += l
       if l in woord:
        letter()
@@ -48,5 +48,9 @@ while True:
         print("je hebt gewonnen")
         print("het woord was " + woord)
         break
-
+#letter niet in woord counter -1 
+  else:
+       print ("-1")
+       counter -= 1
+       letter()
 
