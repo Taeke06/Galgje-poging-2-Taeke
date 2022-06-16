@@ -62,6 +62,11 @@ while True:
     print("-2")
     counter -= 2
     letter()
+#verloren
+  if counter <= 0:
+    print ("je hebt verloren")
+    break
+  print("je hebt nog", counter, "levens over")
 
 
 
