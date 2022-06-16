@@ -20,6 +20,16 @@ def gewonnen():
      return(False)
   return(True)
 
+#print ? + letter (checken)
+def letter():
+  for a in range(len(woord)):
+    if woord[a] in geradenletters:
+       print(woord[a], "", end="")
+    else:
+       print(" ? ", end="")
+  print("")
+  print(" . " * len(woord))
+
 #lengtewoord (in puntjes)
 lengtewoord = len(woord)
 temp = "." * lengtewoord
