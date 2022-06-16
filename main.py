@@ -30,30 +30,14 @@ def letter():
   print("")
   print(" . " * len(woord))
 
-#lengtewoord (in puntjes)
-lengtewoord = len(woord)
-temp = "." * lengtewoord
-print ("het woord heeft " + str(lengtewoord) + " letters")
-print(f"het woord is {woord}")
+letter()
 
+#while functie + input + checken of letter al in woord zit
+while True:
+  l = input("kies een letter\n")
+  if len(l) == 1:
+    if l in geradenletters:
+      print ("die letter heb je al geraden")
+      letter()
 
-
-#heb je het woord
-while gamerunning:
-  streepjes = []
-  #kies een letter
-  l = input ("kies een letter\n")
-  gekozenletters.append(l)
-  print(gekozenletters)
-  for letter in woord:
-    if letter in gekozenletters:
-      streepjes.append(letter)
-    else: 
-      streepjes.append("_")
-  print(" ".join(streepjes))
-  
-  # i = input("nog een beurt?")
-  # if(i == "n"):
-  #   print("ok dan niet")
-  #   gamerunning = False
 
