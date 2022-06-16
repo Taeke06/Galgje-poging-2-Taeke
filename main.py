@@ -1,15 +1,24 @@
 import random
-counter = 0
+counter = 6
+
 #welkomstekst
 print("Welkom bij Galgje!\nGalgje is een spel waar je een woord moet raden die de computer hier heeft uitgekozen.")
 
 #woordenlijst
 woordenlijst= ["informatica", "informatiekunde", "spelletje", "aardigheidje", "scholier", "fotografie", "waardebepaling", "specialiteit", "verzekering", "universiteit" , "heesterperk"]
-gekozenletters = []
-gamerunning = True
+
 
 #computer kiest willekeurig woord
 woord= random.choice (woordenlijst)
+
+geradenletters= []
+
+#checkt of woord is geraden
+def gewonnen():
+  for i in range(len(woord)):
+    if not woord[i] in geradenletters:
+     return(False)
+  return(True)
 
 #lengtewoord (in puntjes)
 lengtewoord = len(woord)
@@ -31,7 +40,6 @@ while gamerunning:
       streepjes.append(letter)
     else: 
       streepjes.append("_")
-
   print(" ".join(streepjes))
   
   # i = input("nog een beurt?")
