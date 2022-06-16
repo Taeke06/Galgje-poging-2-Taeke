@@ -56,6 +56,8 @@ while True:
 #hele woord in 1 keer goed of fout
   elif l == woord:
     print ("je hebt gewonnen")
+    print("het woord was " + woord)
+
     break
   else:
     print("fout woord")
@@ -65,6 +67,7 @@ while True:
 #verloren
   if counter <= 0:
     print ("je hebt verloren")
+    print("het woord was " + woord)
     break
   print("je hebt nog", counter, "levens over")
 
