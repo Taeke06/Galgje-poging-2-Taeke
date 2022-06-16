@@ -49,8 +49,26 @@ while True:
         print("het woord was " + woord)
         break
 #letter niet in woord counter -1 
-  else:
+      else:
        print ("-1")
        counter -= 1
        letter()
+#hele woord in 1 keer goed of fout
+  elif l == woord:
+    print ("je hebt gewonnen")
+    break
+  else:
+    print("fout woord")
+    print("-2")
+    counter -= 2
+    letter()
 
+
+
+
+
+
+
+#while functie + input + checken of letter al in woord zit
+
+#letter niet in woord counter -1 
